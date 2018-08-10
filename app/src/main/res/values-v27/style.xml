@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="app_theme" parent="app_theme_base">
+        <item name="android:navigationBarColor">@color/navigationBarColor</item>
+        <item name="android:navigationBarDividerColor">@color/navigationBarDivider</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+</resources>
