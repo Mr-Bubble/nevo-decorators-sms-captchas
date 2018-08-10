@@ -34,7 +34,7 @@ import me.kr328.nevo.decorators.smscaptcha.utils.PatternUtils;
 
 public class CaptchaDecoratorService extends NevoDecoratorService {
     public static final String TAG = CaptchaDecoratorService.class.getSimpleName();
-    public static final String[] TARGET_PACKAGES = new String[]{"com.android.messaging", "com.google.android.apps.messaging", "com.android.mms"};
+    public static final String[] TARGET_PACKAGES = new String[]{"com.android.messaging", "com.google.android.apps.messaging", "com.android.mms", "com.google.android.talk", "com.google.android.apps.googlevoice"};
 
     public static final String INTENT_ACTION_COPY_CAPTCHA = Global.PREFIX_INTENT_ACTION + ".captcha.copy";
     public static final String INTENT_EXTRA_NOTIFICATION_KEY = Global.PREFIX_INTENT_EXTRA + ".captcha.notification.key";
