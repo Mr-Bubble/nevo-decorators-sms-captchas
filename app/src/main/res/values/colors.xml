@@ -5,5 +5,5 @@
     <color name="colorAccent">#4285f4</color>
     <color name="navigationBarColor">@android:color/white</color>
     <color name="navigationBarDivider">#dcdcdc</color>
-    <color name="adaptiveIconBackground">@color/colorAccent</color>
+    <color name="adaptiveIconBackground">#ffffff</color>
 </resources>

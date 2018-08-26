@@ -1,10 +1,10 @@
 package me.kr328.nevo.decorators.smscaptcha;
 
-import android.os.Build;
+import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
+import android.view.MenuItem;
 
 /**
  * A {@link PreferenceActivity} that presents a set of application settings. On
@@ -23,13 +23,19 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_layout);
 
-        setupWindowsOreo();
+        if (Intent.ACTION_APPLICATION_PREFERENCES.equals(getIntent().getAction())) {
+            assert getSupportActionBar() != null;
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
     }
 
-    private void setupWindowsOreo() {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) return;
-        View decorView = getWindow().getDecorView();
-        decorView.setSystemUiVisibility(decorView.getSystemUiVisibility() | View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
-        getWindow().setNavigationBarColor(getResources().getColor(R.color.colorPrimary ,getTheme()));
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
